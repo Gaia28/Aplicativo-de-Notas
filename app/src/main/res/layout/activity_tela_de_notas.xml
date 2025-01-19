@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@color/ic_launcher_background"
+    android:focusableInTouchMode="true"
+    tools:context=".TelaDeNotas">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="421dp"
+        android:layout_height="833dp"
+        android:layout_marginTop="30dp"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/af4ee97c4858c642636d1356f5da03fb4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="477dp"
+        android:layout_height="67dp"
+        android:background="#E74A60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Notas da Sofi"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="VoltarTelaPrincipal"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:srcCompat="@drawable/ativo_5" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="49dp"
+        android:layout_height="37dp"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:onClick="SalvarNotas"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:srcCompat="@drawable/butao_selecao" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="408dp"
+        android:layout_height="782dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="594dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="55dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <EditText
+                android:id="@+id/EditTextTitulo"
+                android:layout_width="384dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/container_text"
+                android:focusable="auto"
+                android:focusableInTouchMode="true"
+                android:hint="Título"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#6A6868"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.046" />
+
+            <EditText
+                android:id="@+id/EditTextNotas"
+                android:layout_width="383dp"
+                android:layout_height="570dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/container_text"
+                android:focusable="auto"
+                android:focusableInTouchMode="true"
+                android:gravity="left"
+                android:hint="Notas"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#6A6868"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EditTextTitulo"
+                app:layout_constraintVertical_bias="0.149" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="762dp"
+        android:text="Escreva sua nota, meu amor"
+        android:textColor="#6A6565"
+
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView3"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/scrollView3"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
